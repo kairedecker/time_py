@@ -12,6 +12,7 @@ class EnumDayType(enum.Enum, metaclass=MyEnumMeta):
     GLAZ = 'GLAZ'
     URLAUB = 'urlaub'
     REISE = 'reise'
+    OPEN = ''
 
 class EnumDbReturn(enum.Enum):
     DONE = 0
