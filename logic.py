@@ -4,6 +4,7 @@ from models import Workday, EnumDayType, EnumDbReturn
 from db import *
 import re
 
+SQLITE_DB_PATH = "";
 
 def get_manual_times_today():
     date = datetime.date.today()
@@ -51,7 +52,7 @@ def get_manual_times_today():
 
 
 def main():
-    connection = create_connection(r"C:\Users\DEU301998\OneDrive - ABB\Time\time.db")
+    connection = create_connection(SQLITE_DB_PATH)
     if connection != None:
         create_time_table(connection)
         while True:
